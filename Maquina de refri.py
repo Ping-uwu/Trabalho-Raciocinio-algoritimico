@@ -23,6 +23,7 @@ while True:
             exit()
     elif escolha_produto == "ADM":
         print("Bem-Vindo chefe, como podemos ajuda-lo hoje")
+        print(" 1 Colocar dinheiro na maquina")
     elif escolha_produto == "exit":
         exit()
     else:
