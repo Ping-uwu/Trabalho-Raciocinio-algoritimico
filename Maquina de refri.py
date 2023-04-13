@@ -1,5 +1,5 @@
 while True:
-    print("Selecione A1 para comprar uma coca-cola; 4,00 R$")
+    print("Selecione A1 para comprar uma coca-cola; 4,00 R$");
     print("Para entrar no modo adiministrador digite a senha.")
     print("Se deseja sair digite: exit")
     escolha_produto = (input("Digite aqui o código do produto que deseja: "))
