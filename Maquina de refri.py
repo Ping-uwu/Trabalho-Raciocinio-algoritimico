@@ -18,7 +18,7 @@ while True:
             print("Sua bebida foi dispejada, por favor a retire do recipiente de entrega, e tenha um bom dia.")
             exit()
         elif valorpago > coca:
-            valorbebida = (valorpago - coca) 
+            valorbebida = (valorpago - coca)
             print("Sua bebida foi dispejada e seu troco é de:", valorbebida, "R$ por favor os retires de seu recipiente de entrega apropriado e tenha um bom dia.")
             exit()
     elif escolha_produto == "ADM" or "adm":
