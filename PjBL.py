@@ -388,8 +388,7 @@ while True:
                                     if (quant_cedulas20 >= quant_cedulas_moedas):
                                         quant_cedulas20 -= quant_cedulas_moedas
                                         print("\nSaque realizado com sucesso!")
-                                        print("\nQuantidade de cedulas de R$20.00 em maquina atualmente: ",
-                                              quant_cedulas20)
+                                        print("\nQuantidade de cedulas de R$20.00 em maquina atualmente: ", quant_cedulas20)
                                     else:
                                         print("\nQuantidade de cedulas em maquina, insuficiente para o saque!")
 
@@ -402,8 +401,7 @@ while True:
                                     if (quant_cedulas10 >= quant_cedulas_moedas):
                                         quant_cedulas10 -= quant_cedulas_moedas
                                         print("\nSaque realizado com sucesso!")
-                                        print("\nQuantidade de cedulas de R$10.00 em maquina atualmente: ",
-                                              quant_cedulas10)
+                                        print("\nQuantidade de cedulas de R$10.00 em maquina atualmente: ", quant_cedulas10)
                                     else:
                                         print("\nQuantidade de cedulas em maquina, insuficiente para o saque!")
 
