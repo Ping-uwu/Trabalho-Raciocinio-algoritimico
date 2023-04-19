@@ -107,7 +107,8 @@ while True:
                 contador_cedulas_moedas = 0
                 contador_troco = 0
                 # ARREDONDA O TROCO PARA CIMA APÓS O CALCULO
-                troco_user = float("{0:.2f}".format(round(troco_user, 2)))
+                # troco_user = float("{0:.2f}".format(round(troco_user, 2)))
+                troco_user = float('%.2f' % troco_user)
                 print("\nTroco: R$" + troco_user.__str__())
                 #NOVOS CONTADORES ESPECÍFICOS
                 contador20 = 0
@@ -127,7 +128,7 @@ while True:
                             contador_cedulas_moedas -= 1
                             quant_cedulas20 -= 1
                             troco_user -= 20
-                            troco_user = float("{0:.2f}".format(round(troco_user, 2)))
+                            troco_user = float('%.2f' % troco_user)
                             contador_troco += 1
                             contador20 = contador_troco
                         print(contador_troco, " notas de R$ 20.00!")
@@ -139,7 +140,7 @@ while True:
                             contador_cedulas_moedas -= 1
                             quant_cedulas10 -= 1
                             troco_user -= 10
-                            troco_user = float("{0:.2f}".format(round(troco_user, 2)))
+                            troco_user = float('%.2f' % troco_user)
                             contador_troco += 1
                             contador10 = contador_troco
                         print(contador_troco, " notas de R$ 10.00!")
@@ -151,7 +152,7 @@ while True:
                             contador_cedulas_moedas -= 1
                             quant_cedulas5 -= 1
                             troco_user -= 5
-                            troco_user = float("{0:.2f}".format(round(troco_user, 2)))
+                            troco_user = float('%.2f' % troco_user)
                             contador_troco += 1
                             contador5 = contador_troco
                         print(contador_troco, " notas de R$ 5.00!")
@@ -163,7 +164,7 @@ while True:
                             contador_cedulas_moedas -= 1
                             quant_cedulas2 -= 1
                             troco_user -= 2
-                            troco_user = float("{0:.2f}".format(round(troco_user, 2)))
+                            troco_user = float('%.2f' % troco_user)
                             contador_troco += 1
                             contador2 = contador_troco
                         print(contador_troco, " notas de R$ 2.00!")
@@ -175,7 +176,7 @@ while True:
                             contador_cedulas_moedas -= 1
                             quant_moedas1 -= 1
                             troco_user -= 1
-                            troco_user = float("{0:.2f}".format(round(troco_user, 2)))
+                            troco_user = float('%.2f' % troco_user)
                             contador_troco += 1
                             contador1 = contador_troco
                         print(contador_troco, " moedas de R$ 1.00!")
@@ -187,7 +188,7 @@ while True:
                             contador_cedulas_moedas -= 1
                             quant_moedas050 -= 1
                             troco_user -= 0.5
-                            troco_user = float("{0:.2f}".format(round(troco_user, 2)))
+                            troco_user = float('%.2f' % troco_user)
                             contador_troco += 1
                             contador05 = contador_troco
                         print(contador_troco, " moedas de R$ 0.50!")
@@ -199,7 +200,7 @@ while True:
                             contador_cedulas_moedas -= 1
                             quant_moedas025 -= 1
                             troco_user -= 0.25
-                            troco_user = float("{0:.2f}".format(round(troco_user, 2)))
+                            troco_user = float('%.2f' % troco_user)
                             contador_troco += 1
                             contador025 = contador_troco
                         print(contador_troco, " moedas de R$ 0.25!")
@@ -211,7 +212,7 @@ while True:
                             contador_cedulas_moedas -= 1
                             quant_moedas010 -= 1
                             troco_user -= 0.10
-                            troco_user = float("{0:.2f}".format(round(troco_user, 2)))
+                            troco_user = float('%.2f' % troco_user)
                             contador_troco += 1
                             contador010 = contador_troco
                         print(contador_troco, " moedas de R$ 0.10!")
@@ -223,7 +224,7 @@ while True:
                             contador_cedulas_moedas -= 1
                             quant_moedas005 -= 1
                             troco_user -= 0.05
-                            troco_user = float("{0:.2f}".format(round(troco_user, 2)))
+                            troco_user = float('%.2f' % troco_user)
                             contador_troco += 1
                             contador005 = contador_troco
                         print(contador_troco, " moedas de R$ 0.05!")
