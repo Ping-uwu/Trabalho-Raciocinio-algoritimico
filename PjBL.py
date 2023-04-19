@@ -55,6 +55,7 @@ while True:
 
             while True:
                 valor_pago = input("Digite o valor que você deseja adicionar em cédulas ou moedas: (Nota mais alta aceita R$20.00) (Digite '0' para finalizar a adição de valores)")
+                print()
 
                 if (valor_pago == '20'):
                     quant_cedulas20 += 1
@@ -97,6 +98,7 @@ while True:
                 print("Você não inseriu dinheiro suficiente, compra negada.")
                 print()
                 print("Saldo em maquina atualizado: R$", valor_totalpago)
+                print()
             elif valor_totalpago == valor_bebida:
                 print("Compra realizada com sucesso! Retire sua bebida.")
                 valor_totalpago = 0
@@ -117,64 +119,102 @@ while True:
                 troco_user = valor_totalpago
                 troco_total = valor_totalpago
                 contador_cedulas_moedas = 0
+                contador_troco = 0
 
                 print("Troco: ")
+                print()
                 
                 while True:
 
                     if ((troco_user/20) >= 1) and (quant_cedulas20 > 0):
                         contador_cedulas_moedas = int((troco_user)/20)
-                        quant_cedulas20 -= contador_cedulas_moedas
-                        troco_user -= 20 * contador_cedulas_moedas
-                        print(contador_cedulas_moedas, " notas de R$ 20.00!")
+                        while (quant_cedulas20 > 0) and (contador_cedulas_moedas >= 1): 
+                            contador_cedulas_moedas -= 1
+                            quant_cedulas20 -= 1
+                            troco_user -= 20
+                            contador_troco += 1
+                        print(contador_troco, " notas de R$ 20.00!")
+                        contador_troco = 0
 
                     elif ((troco_user/10) >= 1) and (quant_cedulas10 > 0):
                         contador_cedulas_moedas = int((troco_user)/10)
-                        quant_cedulas10 -= contador_cedulas_moedas
-                        troco_user -= 10 * contador_cedulas_moedas
-                        print(contador_cedulas_moedas, " notas de R$ 10.00!")
+                        while (quant_cedulas10 > 0) and (contador_cedulas_moedas >= 1):
+                            contador_cedulas_moedas -= 1
+                            quant_cedulas10 -= 1
+                            troco_user -= 10
+                            contador_troco += 1
+                        print(contador_troco, " notas de R$ 10.00!")
+                        contador_troco = 0
 
                     elif ((troco_user/5) >= 1) and (quant_cedulas5 > 0):
                         contador_cedulas_moedas = int((troco_user)/5)
-                        quant_cedulas5 -= contador_cedulas_moedas
-                        troco_user -= 5 * contador_cedulas_moedas
-                        print(contador_cedulas_moedas, " notas de R$ 5.00!")
+                        while (quant_cedulas5 > 0) and (contador_cedulas_moedas >= 1):
+                            contador_cedulas_moedas -= 1
+                            quant_cedulas5 -= 1
+                            troco_user -= 5
+                            contador_troco += 1
+                        print(contador_troco, " notas de R$ 5.00!")
+                        contador_troco = 0
 
                     elif ((troco_user/2) >= 1) and (quant_cedulas2 > 0):
                         contador_cedulas_moedas = int((troco_user)/2)
-                        quant_cedulas2 -= contador_cedulas_moedas
-                        troco_user -= 2 * contador_cedulas_moedas
-                        print(contador_cedulas_moedas, " notas de R$ 2.00!")
+                        while (quant_cedulas2 > 0) and (contador_cedulas_moedas >= 1):
+                            contador_cedulas_moedas -= 1
+                            quant_cedulas2 -= 1
+                            troco_user -= 2
+                            contador_troco += 1
+                        print(contador_troco, " notas de R$ 2.00!")
+                        contador_troco = 0
 
                     elif (troco_user >= 1) and (quant_moedas1 > 0):
                         contador_cedulas_moedas = int(troco_user)
-                        quant_moedas1 -= contador_cedulas_moedas
-                        troco_user -= contador_cedulas_moedas
-                        print(contador_cedulas_moedas, " moedas de R$ 1.00!")
+                        while (quant_moedas1 > 0) and (contador_cedulas_moedas >= 1):
+                            contador_cedulas_moedas -= 1
+                            quant_moedas1 -= 1
+                            troco_user -= 1
+                            contador_troco += 1
+                        print(contador_troco, " moedas de R$ 1.00!")
+                        contador_troco = 0
 
                     elif (troco_user >= 0.5) and (quant_moedas050 > 0):
                         contador_cedulas_moedas = int((troco_user)/0.5)
-                        quant_moedas050 -= contador_cedulas_moedas
-                        troco_user -= 0.5 * contador_cedulas_moedas
-                        print(contador_cedulas_moedas, " moedas de R$ 0.50!")
+                        while (quant_moedas050 > 0) and (contador_cedulas_moedas >= 1):
+                            contador_cedulas_moedas -= 1
+                            quant_moedas050 -= 1
+                            troco_user -= 0.5
+                            contador_troco += 1
+                        print(contador_troco, " moedas de R$ 0.50!")
+                        contador_troco = 0
 
                     elif (troco_user >= 0.25) and (quant_moedas025 > 0):
                         contador_cedulas_moedas = int((troco_user)/0.25)
-                        quant_moedas025 -= contador_cedulas_moedas
-                        troco_user -= 0.25 * contador_cedulas_moedas
-                        print(contador_cedulas_moedas, " moedas de R$ 0.25!")
+                        while (quant_moedas025 > 0) and (contador_cedulas_moedas >= 1):
+                            contador_cedulas_moedas -= 1
+                            quant_moedas025 -= 1
+                            troco_user -= 0.25
+                            contador_troco += 1
+                        print(contador_troco, " moedas de R$ 0.25!")
+                        contador_troco = 0
 
                     elif (troco_user >= 0.10) and (quant_moedas010 > 0):
                         contador_cedulas_moedas = int((troco_user)/0.10)
-                        quant_moedas010 -= contador_cedulas_moedas
-                        troco_user -= 0.10 * contador_cedulas_moedas
-                        print(contador_cedulas_moedas, " moedas de R$ 0.10!")
+                        while (quant_moedas010 > 0) and (contador_cedulas_moedas >= 1):
+                            contador_cedulas_moedas -= 1
+                            quant_moedas010 -= 1
+                            troco_user -= 0.10
+                            contador_troco += 1
+                        print(contador_troco, " moedas de R$ 0.10!")
+                        contador_troco = 0
 
                     elif (troco_user >= 0.05) and (quant_moedas005 > 0):
                         contador_cedulas_moedas = int((troco_user)/0.05)
-                        quant_moedas005 -= contador_cedulas_moedas
-                        troco_user -= 0.05 * contador_cedulas_moedas
-                        print(contador_cedulas_moedas, " moedas de R$ 0.05!")
+                        while (quant_moedas005 > 0) and (contador_cedulas_moedas >= 1):
+                            contador_cedulas_moedas -= 1
+                            quant_moedas005 -= 1
+                            troco_user -= 0.05
+                            contador_troco += 1
+                        print(contador_troco, " moedas de R$ 0.05!")
+                        contador_troco = 0
 
                     elif (troco_user == 0):
                         print()
@@ -230,7 +270,9 @@ while True:
                     escolha_att = input("Você deseja depositar(1) ou sacar(2): Para cancelar digite 0")
                     if (escolha_att == '1'):
                         while True:
+                            print()
                             valor_deposito = input("Digite o valor da cedula ou moeda que você deseja depositar: (Valor mais alto aceita R$20.00 - valor mais baixo aceito R$0.05) (Digite '0' para voltar)")
+                            print()
                             
                             if (valor_deposito == '20'):
                                 quant_cedulas_moedas = int(input("Qual a quantidade de cedulas de R$20.00 você deseja depositar?"))
