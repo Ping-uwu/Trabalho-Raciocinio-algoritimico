@@ -28,7 +28,7 @@ while True:
     # DESLIGA A MAQUINA
     if drink_number == TURN_OFF_CODE:
         print('\nA maquina foi desligada.')
-        exit(0)
+        break
     # ENTRA NO MODO ADMIN
     elif drink_number == ADMIN_PASSWORD:
         # MENU ADMIN
@@ -94,19 +94,19 @@ while True:
     elif drink_number == COCA_INDEX:
         print('\nBebida selecionada: Coca - R$' + COCA_PRICE.__str__())
         if coca_stock == 0:
-            print('Todas as Cocas acabaram :(')
+            print('\nTodas as Cocas acabaram :(')
         # stock logic
         # cash logic
     elif drink_number == FANTA_INDEX:
         print('\nBebida selecionada: Fanta - R$' + FANTA_PRICE.__str__())
         if fanta_stock == 0:
-            print('Todas as Fantas acabaram :(')
+            print('\nTodas as Fantas acabaram :(')
         # stock logic
         # cash logic
     elif drink_number == GUARANA_INDEX:
         print('\nBebida selecionada: Guaraná - R$' + GUARANA_PRICE.__str__())
         if guarana_stock == 0:
-            print('Todas os Guaranas acabaram :(')
+            print('\nTodas os Guaranas acabaram :(')
         # cash logic
     else:
         print('\nBebida ' + str(drink_number) + ' indisponível.')
